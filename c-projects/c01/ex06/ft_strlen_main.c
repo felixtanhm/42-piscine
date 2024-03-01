@@ -1,16 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlen_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 23:37:39 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/02/29 23:40:54 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/01 11:24:57 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
 
 int ft_strlen(char *str)
@@ -27,11 +26,9 @@ int ft_strlen(char *str)
 
 int main(void)
 {
-	int len;
-
 	char *c = "hello world!";
-	len = ft_strlen(c);
+	int len = ft_strlen(c);
+
 	printf("%d", len);
 	return(0);
-
 }

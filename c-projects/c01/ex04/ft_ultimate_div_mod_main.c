@@ -1,46 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft_main.c                              :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod_main.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 19:09:54 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/01 10:54:01 by feltan           ###   ########.fr       */
+/*   Created: 2024/02/29 23:37:45 by felixtanhm        #+#    #+#             */
+/*   Updated: 2024/03/01 10:54:41 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_ultimate_ft(int *********nbr)
+void ft_ultimate_div_mod(int *a, int *b)
 {
-	*********nbr = 42;
+	int div;
+	int mod;
+
+	div = *a / *b;
+	mod = *a % *b;
+
+	*a = div;
+	*b = mod;
 }
 
 int main(void)
 {
-	int num;
-	int *nbr;
-	int **nbr2;
-	int ***nbr3;
-	int ****nbr4;
-	int *****nbr5;
-	int ******nbr6;
-	int *******nbr7;
-	int ********nbr8;
-	int *********nbr9;
+	int a;
+	int b;
 
-	nbr9 = &nbr8;
-	nbr8 = &nbr7;
-	nbr7 = &nbr6;
-	nbr6 = &nbr5;
-	nbr5 = &nbr4;
-	nbr4 = &nbr3;
-	nbr3 = &nbr2;
-	nbr2 = &nbr;
-	nbr = &num;
+	a = 5;
+	b = 2;
 
-	ft_ultimate_ft(nbr9);
-	printf("%d", num);
+	ft_ultimate_div_mod(&a, &b);
+	printf("%d\n", a);
+	printf("%d\n", b);
 	return (0);
 }

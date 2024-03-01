@@ -3,23 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 23:37:53 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/02/29 23:39:04 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/01 10:53:15 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_ft(int *********nbr)
 {
-	int div;
-	int mod;
-
-	div = *a / *b;
-	mod = *a % *b;
-
-	*a = div;
-	*b = mod;
+	*********nbr = 42;
 }

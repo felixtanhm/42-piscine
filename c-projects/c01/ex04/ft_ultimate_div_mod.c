@@ -3,10 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 23:37:45 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/02/29 23:37:57 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/01 10:54:36 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void ft_ultimate_div_mod(int *a, int *b)
+{
+	int div;
+	int mod;
+
+	div = *a / *b;
+	mod = *a % *b;
+
+	*a = div;
+	*b = mod;
+}
