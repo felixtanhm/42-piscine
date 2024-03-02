@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/03 03:15:58 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/03 04:12:08 by felixtanhm       ###   ########.fr       */
+/*   Created: 2024/03/03 03:44:50 by felixtanhm        #+#    #+#             */
+/*   Updated: 2024/03/03 04:07:42 by felixtanhm       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dest, const char *src) 
+#include <stdio.h>
+
+int ft_str_is_numeric(char *str)
 {
   int i = 0;
 
-  while(src[i] != '\0')
+  if(str[i] == '\0')
+    return 1;
+  
+  while (str[i] != '\0')
   {
-    dest[i] = src[i];
+    if(str[i] < '0' || str[i] > '9')
+      return 0;
     i++;
   }
 
-  return dest;
+  return 1;
+}
+
+int main(void)
+{
+  char str[40] = "123";
+  int i = ft_str_is_numeric(str);
+
+  printf("%d", i);
+  return 0;
 }
