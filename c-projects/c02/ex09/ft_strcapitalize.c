@@ -6,11 +6,9 @@
 /*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:09:01 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/03 13:44:53 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/03 13:46:56 by felixtanhm       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char *ft_strcapitalize(char *str)
 {
