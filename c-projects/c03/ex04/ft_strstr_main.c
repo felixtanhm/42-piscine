@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:45:29 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/04 10:04:35 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/04 12:25:58 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char *ft_strstr(char *str, char *to_find)
 int main(void)
 {
   char str[40] = "hello";
-  char to_find[40] = "ell";
+  char to_find[40] = "lo";
 
   char *ptr = ft_strstr(str, to_find);
   printf("%s\n", ptr);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_str_is_printable_main.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 03:44:50 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/03 04:21:29 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/04 11:54:22 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_str_is_printable(char *str)
 
   if(str[i] == '\0')
     return 1;
-  
+
   while (str[i] != '\0')
   {
     if(str[i] < 32 || str[i] > 126 )
@@ -32,6 +32,7 @@ int ft_str_is_printable(char *str)
 int main(void)
 {
   char str[40] = "ABC";
+  str[3] = '\t';
   int i = ft_str_is_printable(str);
 
   printf("%d\n", i);

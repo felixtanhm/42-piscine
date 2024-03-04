@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strncat_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:25:35 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/04 06:42:28 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/04 12:20:53 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 int main(void)
 {
   char str1[40] = "hello";
-  char str2[40] = " world";
+  char str2[40] = "world";
 
   ft_strncat(str1, str2, 4);
   printf("%s\n", str1);
