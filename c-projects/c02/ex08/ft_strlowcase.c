@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 04:23:18 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/03 04:34:12 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/05 11:43:01 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ char *ft_strlowcase(char *str)
 
   while(str[i] != '\0')
   {
-    str[i] = str[i] + 32;
+	if(str[i] >= 'A' && str[i] <= 'Z')
+    	str[i] = str[i] + 32;
     i++;
   }
-  
+
   return str;
 }
