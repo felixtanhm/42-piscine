@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:56:28 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/04 07:22:28 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/05 17:24:21 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,27 @@ int ft_strlen(char *str)
 
 unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 {
-  int destLen = ft_strlen(dest);
-  int srcLen = ft_strlen(src);
-  int finalSize = size - destLen - 1;
-  int i = 0;
+	int	dest_len;
+	int	src_len;
+	int	final_size;
+	int	i;
 
-  if(finalSize != 0)
-  {
-    while(src[i] != '\0' && i < finalSize)
-    {
-      dest[destLen + i] = src[i];
-      i++;
-    }
-   dest[destLen + i] = '\0';
-  }
-  return destLen + srcLen;
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	final_size = size - dest_len - 1;
+	i = 0;
+	if (final_size <= 0)
+		return (src_len + size);
+	else
+	{
+		while (src[i] != '\0' && i < final_size)
+		{
+			dest[dest_len + i] = src[i];
+			i++;
+		}
+		dest[dest_len + i] = '\0';
+	}
+	return (dest_len + src_len);
 }
 
 int main(void)
@@ -48,7 +54,7 @@ int main(void)
   char dest[10] = "hello";
   char src[40] = " world";
 
-  ft_strlcat(dest, src, 11);
+  ft_strlcat(dest, src, 10);
   printf("%s\n", dest);
   return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:45:29 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/04 12:25:58 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/05 17:03:11 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ char *ft_strstr(char *str, char *to_find)
 {
   int i = 0;
   int j = 0;
-  int to_find_len = ft_strlen(to_find);
 
   while(str[i] != '\0')
   {
@@ -36,13 +35,14 @@ char *ft_strstr(char *str, char *to_find)
     {
 			while(to_find[j] != '\0')
 			{
-				if(to_find[j] == str[i + j])
+				if (to_find[j] != str[i + j])
+					break ;
+				else
 					j++;
-				if(to_find[j] != str[i + j])
-					j = to_find_len;
 			}
-			if(j == to_find_len)
-				return &str[i];
+			if (to_find[j] == '\0')
+				return (&str[i]);
+			j = 0;
     }
     i++;
   }
@@ -51,8 +51,8 @@ char *ft_strstr(char *str, char *to_find)
 
 int main(void)
 {
-  char str[40] = "hello";
-  char to_find[40] = "lo";
+  char str[40] = "jeepya meepya";
+  char to_find[40] = "ep";
 
   char *ptr = ft_strstr(str, to_find);
   printf("%s\n", ptr);
