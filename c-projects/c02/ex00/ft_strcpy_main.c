@@ -17,7 +17,7 @@ char *ft_strcpy(char *dest, const char *src)
 
 int main(void)
 {
-  char src[40] = "\n";
+  char src[40] = "hello 123";
   char dest[40];
 
   ft_strcpy(dest, src);

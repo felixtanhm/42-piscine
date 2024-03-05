@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 03:44:50 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/05 14:04:58 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/05 17:37:57 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int ft_str_is_alpha(char *str)
 
 int main(void)
 {
-  char str[40] = "hello";
+  char str[40] = "123hello";
   int i = ft_str_is_alpha(str);
 
   printf("%d", i);

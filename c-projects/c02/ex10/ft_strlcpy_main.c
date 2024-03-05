@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 20:56:20 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/03 21:14:12 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/05 17:43:25 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int ft_strlen(char *str)
 unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {
   int i  = 0;
-  int len = ft_strlen(src); 
+  int len = ft_strlen(src);
 
   if(size != 0)
   {
@@ -44,10 +44,10 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 
 int main(void)
 {
-  char str[40] = "hello world";
-  char dest[40];
+  char str[40] = "hello";
+  char dest[] = "THE WORLD of here";
 
-  ft_strlcpy(dest, str, 10);
+  ft_strlcpy(dest, str, 5);
   printf("%s\n", dest);
   return 0;
 }

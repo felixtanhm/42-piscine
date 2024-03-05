@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 04:23:18 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/04 11:53:53 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/05 17:41:15 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char *ft_strupcase(char *str)
 
 int main(void)
 {
-  char str[40] = "hello";
+  char str[40] = "123hello";
   ft_strupcase(str);
   printf("%s", str);
   return 0;

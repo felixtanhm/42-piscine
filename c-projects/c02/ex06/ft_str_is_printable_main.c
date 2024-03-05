@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 03:44:50 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/04 11:54:22 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/05 17:40:32 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ int ft_str_is_printable(char *str)
 
 int main(void)
 {
-  char str[40] = "ABC";
-  str[3] = '\t';
+  char str[40] = "abc";
   int i = ft_str_is_printable(str);
 
   printf("%d\n", i);
