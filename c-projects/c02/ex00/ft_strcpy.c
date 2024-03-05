@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 03:15:58 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/03 04:12:08 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/05 15:14:06 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dest, const char *src) 
+char *ft_strcpy(char *dest, const char *src)
 {
   int i = 0;
 
@@ -19,6 +19,7 @@ char *ft_strcpy(char *dest, const char *src)
     dest[i] = src[i];
     i++;
   }
+  dest[i] = '\0';
 
   return dest;
 }

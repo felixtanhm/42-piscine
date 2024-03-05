@@ -6,31 +6,31 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:09:01 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/04 13:43:52 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/05 14:38:37 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_is_alphanum(char *c)
+int	ft_is_alphanum(char c)
 {
-	if (*c < '0')
+	if (c < '0')
 		return (1);
-	if (*c > '9' && *c < 'A')
+	if (c > '9' && c < 'A')
 		return (1);
-	if (*c > 'Z' && *c < 'a')
+	if (c > 'Z' && c < 'a')
 		return (1);
-	if (*c > 'z')
+	if (c > 'z')
 		return (1);
 	return (0);
 }
 
-int	ft_checkfirstchar(char *c)
+int	ft_checkfirstchar(char *x)
 {
-	if (ft_is_alphanum(c) == 0)
+	if (ft_is_alphanum(*x) == 0)
 	{
-		if (*c >= 'a' && *c <= 'z')
-			*c -= 32;
+		if (x[0] >= 'a' && x[0] <= 'z')
+			*x -= 32;
 		return (1);
 	}
 	return (0);
@@ -45,7 +45,7 @@ char	*ft_strcapitalize(char *str)
 	is_prior_alphanum = ft_checkfirstchar(&str[0]);
 	while (str[i] != '\0')
 	{
-		if (ft_is_alphanum(&str[i]) == 0)
+		if (ft_is_alphanum(str[i]) == 0)
 		{
 			if (is_prior_alphanum == 0 && str[i] >= 'a' && str[i] <= 'z')
 			{

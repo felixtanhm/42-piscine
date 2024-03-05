@@ -1,7 +1,7 @@
-#include <unistd.h> 
+#include <unistd.h>
 #include <stdio.h>
 
-char *ft_strcpy(char *dest, const char *src) 
+char *ft_strcpy(char *dest, const char *src)
 {
   int i = 0;
 
@@ -10,11 +10,12 @@ char *ft_strcpy(char *dest, const char *src)
     dest[i] = src[i];
     i++;
   }
+  dest[i] = '\0';
 
   return dest;
 }
 
-int main(void) 
+int main(void)
 {
   char src[40] = "\n";
   char dest[40];
