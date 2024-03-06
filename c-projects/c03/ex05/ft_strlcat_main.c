@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:56:28 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/06 11:57:31 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/06 15:47:24 by felixtanhm       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 
 int main(void)
 {
-  char dest[10] = "hello";
-  char src[40] = " world";
+  char dest[15] = "hello";
+  char src[40] = " world too";
 
   ft_strlcat(dest, src, 10);
   printf("%s\n", dest);
