@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:45:29 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/05 17:03:11 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/06 11:06:19 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char *ft_strstr(char *str, char *to_find)
     }
     i++;
   }
-  return NULL;
+  return (NULL);
 }
 
 int main(void)

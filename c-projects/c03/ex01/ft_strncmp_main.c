@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 05:55:10 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/05 15:06:05 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/06 11:49:45 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
   unsigned int i = 0;
 
-  while(s1[i] != '\0' && s2[i] != '\0' && i < n-1)
+  while((s1[i] != '\0' || s2[i] != '\0') && i < n)
   {
 	if(s1[i] != s2[i])
 		return (s1[i] - s2[i]);
 	i++;
   }
 
-  return (s1[i] - s2[i]);
+  return (0);
 }
 
 int main(void)
@@ -60,6 +60,14 @@ int main(void)
   printf("Diff Character at Start, Same Length\n");
   printf("Felix Try: %d\n", result7);
   printf("Control: %d\n", result8);
+
+  char str9[40] = "hello";
+  char str10[40] = "hello";
+  int result9 = ft_strncmp(str9, str10, 5);
+  int result10 = strncmp(str9, str10, 5);
+  printf("Same strings\n");
+  printf("Felix Try: %d\n", result9);
+  printf("Control: %d\n", result10);
 return 0;
 
 }
