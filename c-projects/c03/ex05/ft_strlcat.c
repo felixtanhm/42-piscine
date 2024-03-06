@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:56:28 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/06 11:57:38 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/06 15:51:53 by felixtanhm       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,19 @@ int ft_strlen(char *str)
 
 unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	dlen;
-	unsigned int	slen;
+  int destLen = ft_strlen(dest);
+  int srcLen = ft_strlen(src);
+  int finalSize = size - destLen - 1;
+  int i = 0;
 
-	i = 0;
-	dlen = ft_strlen(dest);
-	slen = ft_strlen(src);
-	j = dlen;
-	if (size == 0 || size <= dlen)
-		return (slen + size);
-	while (src [i] != '\0' && i < size - dlen - 1)
-	{
-		dest[j] = src[i];
-		i++;
-		j++;
-	}
-	dest[j] = '\0';
-	return (dlen + slen);
+  if(finalSize != 0)
+  {
+    while(src[i] != '\0' && i < finalSize)
+    {
+      dest[destLen + i] = src[i];
+      i++;
+    }
+   dest[destLen + i] = '\0';
+  }
+  return destLen + srcLen;
 }
