@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:09:01 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/05 16:12:34 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/06 14:26:40 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ char	*ft_strcapitalize(char *str)
 	{
 		if (ft_is_alphanum(str[i]) == 1)
 		{
+			if(str[i] >= 'A' && str[i] <= 'Z')
+			{
+				str[i] += 32;
+			}
 			if(is_prior_alphanum == 0)
 			{
 				if (str[i] >= 'a' && str[i] <= 'z')
@@ -66,7 +70,7 @@ char	*ft_strcapitalize(char *str)
 
 int main(void)
 {
-  char str[100] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+  char str[100] = "salut, coMMent tu vas ? 42mots quaRante-deux; cinquante+et+un";
   ft_strcapitalize(str);
   printf("%s\n", str);
 
