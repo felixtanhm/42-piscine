@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
+/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 10:40:36 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/06 16:18:45 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/07 12:10:53 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int ft_atoi(char *str)
 
 int main(void)
 {
-	char str[] = "    ---+-+-12ab567";
+	char str[] = "-1234ab567";
 	int res = ft_atoi(str);
 	int res2 = atoi(str);
 	printf("Res1: %d\n", res);
