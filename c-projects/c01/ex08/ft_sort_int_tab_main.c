@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab_main.c                              :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 23:37:37 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/07 11:52:02 by feltan           ###   ########.fr       */
+/*   Created: 2024/02/29 14:33:39 by feltan            #+#    #+#             */
+/*   Updated: 2024/03/07 11:42:30 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
 
 void	ft_swap(int *a, int *b)
@@ -21,26 +22,30 @@ void	ft_swap(int *a, int *b)
 	*b = tmp;
 }
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	int i;
-	int len;
+	int	i;
 
-	i = 0;
-	len = size - 1;
-
-	while(i < size / 2)
+	while (size >= 0)
 	{
-		ft_swap(&tab[i], &tab[len - i]);
-		i++;
+		i = 0;
+		while(i < size -1)
+		{
+			if(tab[i] > tab[i + 1])
+				ft_swap(&tab[i], &tab[i + 1]);
+			i++;
+		}
+		size--;
 	}
 }
 
 int main(void)
 {
-	int numArr[5] = {1, 2, 3, 4, 5};
+	int numArr[5] = {3, 2, 4, 5, 1};
+	int size;
 
-	ft_rev_int_tab(numArr, 5);
+	size = 5;
+	ft_sort_int_tab(numArr, size);
 	printf("%d, %d, %d, %d,%d", numArr[0], numArr[1], numArr[2], numArr[3], numArr[4]);
 	return(0);
 }
