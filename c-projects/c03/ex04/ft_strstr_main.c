@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:45:29 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/06 11:06:19 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/07 15:04:40 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ int ft_strlen(char *str)
 
 char *ft_strstr(char *str, char *to_find)
 {
+	// Get to_find length
+	// Use strncmp to compare the 2 strings if first letter matches
+	// If strncmp returns 0, print the string
+	// If both strings are empty, return the original str
   int i = 0;
   int j = 0;
 
@@ -46,7 +50,7 @@ char *ft_strstr(char *str, char *to_find)
     }
     i++;
   }
-  return (NULL);
+  return (0);
 }
 
 int main(void)
@@ -55,6 +59,7 @@ int main(void)
   char to_find[40] = "ep";
 
   char *ptr = ft_strstr(str, to_find);
+  char *control = strstr(str, to_find);
   printf("%s\n", ptr);
   return 0;
 }

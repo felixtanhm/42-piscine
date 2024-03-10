@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 03:44:50 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/05 17:38:25 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/07 14:37:09 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int ft_str_is_numeric(char *str)
 
 int main(void)
 {
-  char str[40] = "helo";
+  char str[40] = "123";
   int i = ft_str_is_numeric(str);
 
   printf("%d", i);

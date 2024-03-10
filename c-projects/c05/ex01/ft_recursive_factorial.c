@@ -6,13 +6,13 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 15:01:47 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/09 15:22:27 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/09 18:18:14 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(unsigned int nb)
+int ft_recursive_factorial(int nb)
 {
-	unsigned int result = 1;
+	int result = 1;
 
 	if(nb < 0)
 		return 0;

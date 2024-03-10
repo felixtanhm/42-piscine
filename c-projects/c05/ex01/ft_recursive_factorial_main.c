@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_factorial_main.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 15:01:47 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/09 15:07:33 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/10 13:41:05 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_recursive_factorial(unsigned int nb)
+int ft_recursive_factorial(int nb)
 {
-	unsigned int result = 1;
+	int result = 1;
 
 	if(nb < 0)
 		return 0;
@@ -28,7 +28,7 @@ int ft_recursive_factorial(unsigned int nb)
 
 int main(void)
 {
-	int res = ft_recursive_factorial(4);
+	int res = ft_recursive_factorial(-4);
 	printf("%d", res);
 	return 0;
 }

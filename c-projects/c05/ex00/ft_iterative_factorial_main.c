@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_iterative_factorial_main.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 14:47:01 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/09 14:56:15 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/10 13:39:42 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int ft_iterative_factorial(int nb)
 
 int main(void)
 {
-	int num = 4;
+	int num = -4;
 	int res = ft_iterative_factorial(num);
 
 	printf("%d", res);

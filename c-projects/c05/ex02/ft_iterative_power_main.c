@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_iterative_power_main.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 15:22:44 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/09 15:31:57 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/09 18:29:12 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_iterative_power(unsigned int nb, unsigned int power)
+int ft_iterative_power(int nb, int power)
 {
-	if(nb == 0 && power == 0)
+	if(power == 0)
 		return 1;
 	if(power < 0)
 		return 0;

@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 03:15:58 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/05 17:37:18 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/07 14:36:55 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char *ft_strncpy(char *dest, const char *src, unsigned int n)
 
 int main(void)
 {
-  char src[40] = "car";
+  char src[40] = "carty";
   char dest[40] = "fgsfggsfgf";
   int size = 4;
   int i = 0;
