@@ -123,6 +123,9 @@ int main()
     // Test case 5: Testing 0 and 1
     test_is_prime(0, 0); // Expected to pass
     test_is_prime(1, 0); // Expected to pass
+	test_is_prime(2147483647, 0); // Expected to pass
+    test_is_prime(-2147483647, 0); // Expected to pass
+
 
     // Test case 1: Testing next prime after a prime number
     test_find_next_prime(2, 2); // Expected to pass
@@ -136,6 +139,8 @@ int main()
     test_find_next_prime(0, 2); // Expected to pass
     test_find_next_prime(-3, 2); // Expected to pass
     test_find_next_prime(-13, 2); // Expected to pass
+    test_find_next_prime(2147483647, 2147483647); // Expected to pass
+    test_find_next_prime(-2147483647, 2); // Expected to pass
 
 
     return 0;
