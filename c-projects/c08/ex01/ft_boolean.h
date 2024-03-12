@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/09 16:14:30 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/12 13:20:59 by feltan           ###   ########.fr       */
+/*   Created: 2024/03/11 19:20:02 by feltan            #+#    #+#             */
+/*   Updated: 2024/03/12 14:44:50 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_prime(int nb)
-{
-	int	i;
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-	i = 2;
-	if (nb <= 1)
-		return (0);
-	if (nb == 2 || nb == 3)
-		return (1);
-	while (i < nb)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
+# include <unistd.h>
+
+typedef int	t_bool;
+
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define EVEN(number) (number % 2 == 0)
+# define FALSE 0
+# define TRUE 1
+# define SUCCESS 0
+#endif

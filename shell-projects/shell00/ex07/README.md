@@ -1,11 +1,14 @@
 ## 🚨 Instructions
 
-1. Create 2 files: `a` and `b`.
-2. Insert random content into both files. You can use the template data provided to you by 42 in the assignment PDF.
-3. Run the following in your terminal
-
+1. From the `resources.tar.gz` download folder provided by the assignment, copy the `a` and `sw.diff` files to your assignment folder.
+2. Make a duplicate of `a`, naming it `b`.
+3. Run the following in your terminal:
 ```bash
-diff a b > sw.diff
+patch b sw.diff
 ```
-
-A sw.diff file should be generated highlighting the differences in the 2 files.
+4. Notice that b should be updated with new content.
+5. To confirm that your patched worked correctly, run the following command:
+```bash
+diff a b > sw2.diff
+```
+6. Confirm that the 2 files `sw.diff` and `sw2.diff` are similar.

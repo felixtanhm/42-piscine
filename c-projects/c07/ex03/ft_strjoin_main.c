@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 14:35:23 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/11 16:19:36 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/11 18:12:01 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,12 @@ char *ft_strcat(char *dest, char *src)
 char *ft_strjoin(int size, char **strs, char *sep)
 {
 	if(size == 0)
-		return "";
+		return ((char *)malloc(sizeof(char)));
 
 	int i;
-	i = 0;
 	char *joined_str;
-	int sep_size = sizeof(sep) * (size - 1);
-	joined_str = malloc(sizeof(strs) + sep_size);
+	i = 0;
+	joined_str = malloc(sizeof(strs) + sizeof(sep) * (size - 1));
 
 	while(i < size)
 	{
@@ -63,8 +62,8 @@ char *ft_strjoin(int size, char **strs, char *sep)
 
 int main(void)
 {
-	char *strs[4] = {};
-	char *res = ft_strjoin(0, strs, ", ");
-	printf("%sa", res);
+	char *strs[] = {"one", "two", "three"};
+	char *res = ft_strjoin(3, strs, "");
+	printf("%s", res);
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:09:01 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/04 14:22:01 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/12 13:23:25 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,14 @@ char	*ft_strcapitalize(char *str)
 	is_prior_alphanum = ft_checkfirstchar(&str[0]);
 	while (str[i] != '\0')
 	{
-		if (ft_is_alphanum(&str[i]) == 0)
+		if (ft_is_alphanum(str[i]) == 1)
 		{
-			if (is_prior_alphanum == 0 && str[i] >= 'a' && str[i] <= 'z')
+			if(str[i] >= 'A' && str[i] <= 'Z')
+				str[i] += 32;
+			if(is_prior_alphanum == 0)
 			{
-				str[i] -= 32;
+				if (str[i] >= 'a' && str[i] <= 'z')
+					str[i] -= 32;
 				is_prior_alphanum = 1;
 			}
 		}
