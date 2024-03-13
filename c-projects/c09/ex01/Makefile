@@ -4,14 +4,14 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 SOURCES = $(wildcard ./srcs/*.c)
-OBJECTS = ${notdir $(SOURCES:.c=.o)}
+OBJECTS = ${SOURCES:.c=.o}
 HEADERS = includes
 LIBC = ar rcs
 LIBR = ranlib
 
 # Rules
 .c.o:
-	${CC} ${CFLAGS} -I ${HEADERS} -c ${SOURCES} -o ${OBJECTS}
+	${CC} ${CFLAGS} -I ${HEADERS} -c $< -o ${<:.c=.o}
 ${NAME}: ${OBJECTS}
 			${LIBC} ${NAME} ${OBJECTS}
 			${LIBR} ${NAME}
