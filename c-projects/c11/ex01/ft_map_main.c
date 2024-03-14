@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_map.c                                           :+:      :+:    :+:   */
+/*   ft_map_main.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 14:49:40 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/14 17:40:40 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/14 17:40:49 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,18 @@ int *ft_map(int *tab, int length, int(*f)(int))
 		i++;
 	}
 	return new_arr;
+}
+
+int mul2(int num)
+{
+	return num *= 2;
+}
+
+#include <stdio.h>
+int main(void)
+{
+	int nums[5] = {1, 2, 3, 4, 5};
+	int *res = ft_map(nums, 5, &mul2);
+	printf("%d, %d, %d, %d, %d", res[0], res[1], res[2], res[3], res[4]);
+	return 0;
 }

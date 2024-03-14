@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sort.c                                       :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 15:06:41 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/14 17:14:33 by feltan           ###   ########.fr       */
+/*   Created: 2024/03/14 15:04:24 by feltan            #+#    #+#             */
+/*   Updated: 2024/03/14 17:27:52 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_sorted_asc(int *tab, int length, int(*f)(int, int))
+int ft_count_if(char **tab, int length, int(*f)(char*))
+{
+	int i = 0;
+	int count = 0;
+
+	while(i < length)
+	{
+		if(f(tab[i]))
+			count++;
+		i++;
+	}
+	return count;
+}
+
+int is_5(char *s1)
 {
 	int i = 0;
 
-	while (i < length - 1)
-	{
-		if(f(tab[i], tab[i + 1]) > 0)
-			return 0;
+	while(s1[i] != '\0')
 		i++;
-	}
-	return 1;
+	return (i == 5);
 }
 
-int ft_is_sorted_desc(int *tab, int length, int(*f)(int, int))
+#include <stdio.h>
+int main(void)
 {
-	int i = 0;
-
-	while (i < length - 1)
-	{
-		if(f(tab[i], tab[i + 1]) < 0)
-			return 0;
-		i++;
-	}
-	return 1;
-}
-
-int ft_is_sort(int *tab, int length, int(*f)(int, int))
-{
-	if(ft_is_sorted_asc(tab, length, f) || ft_is_sorted_desc(tab, length, f))
-		return 1;
+	char *tab[5] = {"hello", "world", "you", "are", "cool"};
+	int res = ft_count_if(tab, 5, &is_5);
+	printf("%d", res);
 	return 0;
 }
