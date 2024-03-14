@@ -6,11 +6,12 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:45:29 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/07 15:04:40 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/14 09:35:25 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 int ft_strlen(char *str)
 {
@@ -26,40 +27,30 @@ int ft_strlen(char *str)
 
 char *ft_strstr(char *str, char *to_find)
 {
-	// Get to_find length
-	// Use strncmp to compare the 2 strings if first letter matches
-	// If strncmp returns 0, print the string
-	// If both strings are empty, return the original str
   int i = 0;
-  int j = 0;
-
+  int j;
   while(str[i] != '\0')
   {
-    if(str[i] == to_find[j])
-    {
-			while(to_find[j] != '\0')
-			{
-				if (to_find[j] != str[i + j])
-					break ;
-				else
-					j++;
-			}
-			if (to_find[j] == '\0')
-				return (&str[i]);
-			j = 0;
-    }
-    i++;
+	j = 0;
+	while(str[i + j] == to_find[j])
+	{
+		if(to_find[j + 1] == '\0')
+			return &str[i];
+		j++;
+	}
+	i++;
   }
   return (0);
 }
 
 int main(void)
 {
-  char str[40] = "jeepya meepya";
+  char str[40] = "jetya meepya";
   char to_find[40] = "ep";
 
   char *ptr = ft_strstr(str, to_find);
   char *control = strstr(str, to_find);
   printf("%s\n", ptr);
+  printf("%s", control);
   return 0;
 }
