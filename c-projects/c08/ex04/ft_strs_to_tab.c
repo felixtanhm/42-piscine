@@ -6,12 +6,17 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 12:14:22 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/14 13:32:15 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/14 13:42:45 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_stock_str.h"
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int ft_strlen(char *str)
 {
@@ -54,4 +59,5 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 		i++;
 	}
 	result[i].str = 0;
+	return result;
 }
