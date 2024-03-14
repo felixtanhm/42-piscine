@@ -6,13 +6,13 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 20:41:56 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/11 20:51:19 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/14 12:06:39 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-# define ABS(value) (value < 0 ? value : value)
+# define ABS(value) (value < 0 ? value *= -1 : value)
 
 #endif
