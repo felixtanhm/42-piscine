@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 06:45:29 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/14 09:35:25 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/14 11:09:36 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char *ft_strstr(char *str, char *to_find)
 {
   int i = 0;
   int j;
+  if(to_find[0] == '\0')
+	return str;
   while(str[i] != '\0')
   {
 	j = 0;
@@ -46,7 +48,7 @@ char *ft_strstr(char *str, char *to_find)
 int main(void)
 {
   char str[40] = "jetya meepya";
-  char to_find[40] = "ep";
+  char to_find[40] = "";
 
   char *ptr = ft_strstr(str, to_find);
   char *control = strstr(str, to_find);
