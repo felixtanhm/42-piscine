@@ -1,74 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_show_tab.c                                      :+:      :+:    :+:   */
+/*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 13:34:28 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/14 16:38:58 by feltan           ###   ########.fr       */
+/*   Created: 2024/03/14 12:14:22 by feltan            #+#    #+#             */
+/*   Updated: 2024/03/14 16:44:50 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stock_str.h"
-#include <unistd.h>
 #include <stdlib.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void ft_putstr(char *str)
-{
-	int i = 0;
-
-	while(str[i] != '\0')
-	{
-		i++;
-	}
-	write(1, str, i);
-}
-
-void ft_putnbr(int nb)
-{
-	if(nb == -2147483648)
-	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
-	}
-	else if(nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-		ft_putnbr(nb);
-	}
-	else if(nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else {
-		ft_putchar(nb + 48);
-	}
-}
-
-void ft_show_tab(struct s_stock_str *par)
-{
-	int i = 0;
-
-	while(par[i].str != 0)
-	{
-		ft_putstr(par[i].str);
-		ft_putchar('\n');
-		ft_putnbr(par[i].size);
-		ft_putchar('\n');
-		ft_putstr(par[i].copy);
-		ft_putchar('\n');
-		i++;
-	}
-}
+#include "ft_stock_str.h"
 
 int ft_strlen(char *str)
 {
@@ -114,11 +57,3 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 	return result;
 }
 
-int main(int argc, char **argv)
-{
-	struct s_stock_str *arr;
-
-	arr = ft_strs_to_tab(argc, argv);
-	ft_show_tab(arr);
-	return (0);
-}
