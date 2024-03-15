@@ -35,6 +35,7 @@ Ensure that you're submitting only the program / function requested. This means:
 - Delete the main function and submit only your solution function (eg. `ft_putchar`) if the exercise is asking for a function
 - Delete any unused libraries
 - Run `norminette -R CheckForbiddenSourceHeader`. The flag is important as Moulinette would be using it as well
+- For exercises with a Header file (eg. `ft.h`), run `norminette -R CheckDefine`.
 
 ## C Libraries 📚
 
@@ -42,11 +43,13 @@ This Github Repo uses only 3 C System Standard Libraries:
 
 - `#include <unistd.h>` - for the `write` function.
 - `#include <stdio.h>` - for the `printf` function.
-- `#include <stdlib.h>` - for the `NULL` function.
+- `#include <stdlib.h>` - for the `malloc` function.
 
 ## ASCII Table 🔡
 
 When looking for characters and symbols in C, you can use decimals to locate them in your .c program/function.
+
+You can also `man ascii` for a table within your terminal.
 
 ![ASCII Table](./ASCII-Table.png)
 
