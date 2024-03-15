@@ -6,18 +6,13 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 12:14:22 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/14 16:08:24 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/15 09:38:50 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 #include "ft_stock_str.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include <stdio.h>
 
 int ft_strlen(char *str)
 {
@@ -52,6 +47,8 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 
 	i = 0;
 	result = (t_stock_str *)malloc((ac + 1) * sizeof(t_stock_str));
+	if(result == NULL)
+		return NULL;
 	while(i < ac)
 	{
 		result[i].size = ft_strlen(av[i]);
@@ -61,4 +58,21 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 	}
 	result[i].str = 0;
 	return result;
+}
+
+int main(int argc, char **argv)
+{
+	int i;
+	struct s_stock_str *arr;
+
+	arr = ft_strs_to_tab(argc, argv);
+	i = 0;
+	while (arr[i].str != 0)
+	{
+		printf("size: %d\n", arr[i].size);
+		printf("str: %s\n", arr[i].str);
+		printf("copy: %s\n", arr[i].copy);
+		i++;
+	}
+	return (0);
 }
