@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 03:44:50 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/07 14:37:13 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/17 15:22:38 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@ int ft_str_is_alpha(char *str)
 
   while (str[i] != '\0')
   {
-    if(str[i] < 'A' || str[i] > 'z' || (str[i] > 'Z' && str[i] < 'a'))
-      return 0;
-    i++;
+		if ((str[i] < 'A') || (str[i] > 'z'))
+			return (0);
+		if (((str[i] > 'Z') && (str[i] < 'a')))
+			return (0);
+		i++;
+
   }
 
   return 1;
