@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_main.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 15:49:47 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/18 16:00:04 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/18 21:00:36 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,30 +53,31 @@ int check_base(char *base)
 
 void ft_putnbr_base(int nbr, char *base)
 {
-	int is_valid = check_base(base);
 	int base_len = ft_strlen(base);
+	unsigned int number;
 
-	if(is_valid)
+	number = nbr;
+	if(check_base(base))
 	{
 		if(nbr < 0)
 		{
 			ft_putchar('-');
-			nbr *= -1;
+			number = nbr * -1;
 		}
-		if(nbr >= base_len)
+		if(number >= (unsigned int)base_len)
 		{
-			ft_putnbr_base(nbr / base_len, base);
-			ft_putnbr_base(nbr % base_len, base);
+			ft_putnbr_base(number / base_len, base);
+			ft_putnbr_base(number % base_len, base);
 		}
 		else
 		{
-			ft_putchar(base[nbr]);
+			ft_putchar(base[number]);
 		}
 	}
 }
 
 int main(void)
 {
-	ft_putnbr_base(-12, "01");
+	ft_putnbr_base(-2147483648, "01");
 	return 0;
 }
