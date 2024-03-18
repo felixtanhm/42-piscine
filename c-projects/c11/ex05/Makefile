@@ -1,4 +1,4 @@
-#Variables
+# Variables
 NAME = do_op
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -6,8 +6,18 @@ RM = rm -f
 SOURCES = ${wildcard ./srcs/*.c}
 OBJECTS = ${SOURCES:.c=.o}
 HEADERS = includes
+LIBC = ar rcs
+LIBR = ranlib
 
-#Rules
-${NAME}:
-	${CC} ${CFLAGS} -I ${INCLUDES} -c $< -o ${<:.c=.o}
-
+# Rules
+.c.o:
+	${CC} ${CFLAGS} -I ${HEADERS} -c $< -o ${<:.c=.o}
+${NAME}: ${OBJECTS}
+			${LIBC} ${NAME} ${OBJECTS}
+			${LIBR} ${NAME}
+all: ${NAME}
+clean:
+		${RM} ${OBJECTS}
+fclean: clean
+		${RM} ${NAME}
+re: fclean all

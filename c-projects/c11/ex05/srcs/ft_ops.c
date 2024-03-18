@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha_main.c                             :+:      :+:    :+:   */
+/*   ft_ops.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/03 03:44:50 by felixtanhm        #+#    #+#             */
-/*   Updated: 2024/03/17 16:39:58 by feltan           ###   ########.fr       */
+/*   Created: 2024/03/16 17:04:30 by feltan            #+#    #+#             */
+/*   Updated: 2024/03/16 17:06:08 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_str_is_alpha(char *str)
+int ft_add(int a, int b)
 {
-  int i = 0;
-
-  if(str[i] == '\0')
-    return 1;
-  while (str[i] != '\0')
-  {
-		if ((str[i] < 'A') || (str[i] > 'z'))
-			return (0);
-		if (((str[i] > 'Z') && (str[i] < 'a')))
-			return (0);
-		i++;
-  }
-
-  return 1;
+	return a + b;
 }
 
-int main(void)
+int ft_minus(int a, int b)
 {
-  char str[40] = "hello";
-  int i = ft_str_is_alpha(str);
+	return a - b;
+}
 
-  printf("%d", i);
-  return 0;
+int ft_mul(int a, int b)
+{
+	return a * b;
+}
+
+int ft_div(int a, int b)
+{
+	return a / b;
 }

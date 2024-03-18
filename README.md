@@ -8,10 +8,10 @@ Please open an issue in this repository if you spot any errors.
 | Projects      | Solutions  |
 | :--------------:| :----------:|
 | Shell00 | [100%](./shell-projects/shell00/) |
-| Shell01 | [100%](./shell-projects/shell01/)  |
+| Shell01 | [70%](./shell-projects/shell01/)  |
 | C00 | [70%](./c-projects/c00/) |
 | C01 | [100%](./c-projects/c01/) |
-| C02 | [55%](./c-projects/c02/) |
+| C02 | [85%](./c-projects/c02/) |
 | C03 | [100%](./c-projects/c03/) |
 | C04 | [70%](./c-projects/c04/)|
 | C05 | [80%](./c-projects/c05/)|
