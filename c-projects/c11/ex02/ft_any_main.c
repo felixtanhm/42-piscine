@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   ft_any_main.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 14:54:44 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/14 17:35:29 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/18 19:55:20 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int ft_any(char **tab, int(*f)(char *))
 	return 0;
 }
 
-int is_5(char *str)
+int is_a(char *str)
 {
 	int i = 0;
 
@@ -39,8 +39,8 @@ int is_5(char *str)
 #include <stdio.h>
 int main(void)
 {
-	char *strs[5] = {"hella", "world", "hell"};
-	int res = ft_any(strs, &is_5);
+	char *strs[5] = {"helll", "world", "hell"};
+	int res = ft_any(strs, &is_a);
 	printf("%d", res);
 	return 0;
 }

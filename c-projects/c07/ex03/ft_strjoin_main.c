@@ -6,11 +6,10 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 14:35:23 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/11 18:12:01 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/18 23:19:57 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -24,19 +23,55 @@ int ft_strlen(char *str)
   return i;
 }
 
-char *ft_strcat(char *dest, char *src)
+int ft_total_len(char **strings, char *sep, int size)
 {
-  int destLen = ft_strlen(dest);
-  int i = 0;
+	int total = 0;
+	int i = 0;
+	int sep_len = ft_strlen(sep);
 
-  while(src[i] != '\0')
-  {
-    dest[destLen + i] = src[i];
-    i++;
-  }
-  dest[destLen + i] = '\0';
+	while(i < size)
+	{
+		total = total + ft_strlen(strings[i]) + sep_len;
+		i++;
+	}
+	total -= sep_len;
+	return total;
+}
 
-  return dest;
+char *ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+char *ft_cpy_strings(char **strings, char *result, char *sep, int size)
+{
+	int i = 0;
+	int sep_len = ft_strlen(sep);
+	char *temp;
+
+	temp = result;
+	while(i < size)
+	{
+		ft_strcpy(temp, strings[i]);
+		temp += ft_strlen(strings[i]);
+		if(i < size - 1)
+		{
+			ft_strcpy(temp, sep);
+			temp += sep_len;
+		}
+		i++;
+	}
+	temp[i] = '\0';
+	return result;
 }
 
 char *ft_strjoin(int size, char **strs, char *sep)
@@ -44,26 +79,18 @@ char *ft_strjoin(int size, char **strs, char *sep)
 	if(size == 0)
 		return ((char *)malloc(sizeof(char)));
 
-	int i;
-	char *joined_str;
-	i = 0;
-	joined_str = malloc(sizeof(strs) + sizeof(sep) * (size - 1));
+	char *result;
+	int total_len = ft_total_len(strs, sep, size);
 
-	while(i < size)
-	{
-		ft_strcat(joined_str, strs[i]);
-		if(i < size - 1)
-			ft_strcat(joined_str, sep);
-		i++;
-	}
-	joined_str[ft_strlen(joined_str)] = '\0';
-	return joined_str;
+	result = (char *)malloc(sizeof(char) * (total_len + 1));
+	result = ft_cpy_strings(strs, result, sep, size);
+	return result;
 }
 
 int main(void)
 {
 	char *strs[] = {"one", "two", "three"};
-	char *res = ft_strjoin(3, strs, "");
+	char *res = ft_strjoin(3, strs, ", ");
 	printf("%s", res);
 	return 0;
 }
