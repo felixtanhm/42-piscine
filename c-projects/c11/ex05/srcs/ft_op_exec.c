@@ -6,7 +6,7 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:30:26 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/20 12:04:22 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/20 14:38:26 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,5 @@ void ft_op_exec(char *a, char *b, char *op)
 
 	ft_op_init(op_suite);
 	ft_op_calc(ft_atoi(a), ft_atoi(b), op, op_suite);
-	ft_putstr("/n");
+	ft_putstr('\n');
 }
