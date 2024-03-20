@@ -6,11 +6,13 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:10:57 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/20 15:47:11 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/20 16:05:20 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 void	ft_swap(char **a, char **b)
 {
@@ -40,26 +42,6 @@ void	ft_advanced_sort_string_tab(char **tab, int(*cmp)(char *, char *))
 	}
 }
 
-void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
-{
-	int	index;
-	int	i;
-
-	i = 0;
-	while (tab[i])
-	{
-		index = 0;
-		while (tab[index])
-		{
-			if (tab[index + 1] && (*cmp)(tab[index], tab[index + 1]) > 0)
-				ft_swap(&tab[index], &tab[index + 1]);
-			index++;
-		}
-		i++;
-	}
-}
-
-
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
@@ -71,9 +53,6 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (s1[i] - s2[i]);
 }
-
-#include <stdlib.h>
-#include <string.h>
 int		main(void)
 {
 	int		index;
