@@ -9,11 +9,11 @@ Please open an issue in this repository if you spot any errors.
 | :--------------:| :----------:|
 | Shell00 | [100%](./shell-projects/shell00/) |
 | Shell01 | [70%](./shell-projects/shell01/)  |
-| C00 | [70%](./c-projects/c00/) |
+| C00 | [85%](./c-projects/c00/) |
 | C01 | [100%](./c-projects/c01/) |
 | C02 | [85%](./c-projects/c02/) |
 | C03 | [100%](./c-projects/c03/) |
-| C04 | [70%](./c-projects/c04/)|
+| C04 | [100%](./c-projects/c04/)|
 | C05 | [80%](./c-projects/c05/)|
 | C06 | [100%](./c-projects/c06/) |
 | C07 | [60%](./c-projects/c07/)|
@@ -40,7 +40,7 @@ Please open an issue in this repository if you spot any errors.
 ### **Week4:** C11
 - Focus on `C11` and finishing the previous Projects with 100%.
 - When you're done, you can try to do `C10`. Without finishing `C10`, `C12` and `C13` won't be available to you.
-- Remember to allocate time to preparation of your final exam.
+- Remember to allocate time to prepare for the final exam.
 
 # Exam Tips
 ### **Exam Registration**
