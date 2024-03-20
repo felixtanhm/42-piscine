@@ -20,7 +20,7 @@ Please open an issue in this repository if you spot any errors.
 | C08 | [100%](./c-projects/c08/) |
 | C09 | [100%](./c-projects/c09/)|
 | C10 |  N.A. |
-| C11 | [Not Rated](./c-projects/c11/) |
+| C11 | [100%](./c-projects/c11/) |
 | C12 |  N.A. |
 | C13 |  N.A. |
 
