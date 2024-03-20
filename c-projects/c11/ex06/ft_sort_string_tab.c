@@ -1,46 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any_main.c                                      :+:      :+:    :+:   */
+/*   ft_sort_string_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 14:54:44 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/19 14:21:26 by feltan           ###   ########.fr       */
+/*   Created: 2024/03/20 12:10:57 by feltan            #+#    #+#             */
+/*   Updated: 2024/03/20 12:31:41 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_any(char **tab, int(*f)(char *))
+void	ft_swap(char **a, char **b)
 {
-	int i = 0;
+	char	*tmp;
 
-	while(tab[i])
-	{
-		if(f(tab[i]) != 0)
-			return 1;
-		i++;
-	}
-	return 0;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
-int is_a(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int i = 0;
+	int	i;
 
-	while(str[i] != '\0')
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
 	{
-		if(str[i] == 'a')
-			return (1);
 		i++;
 	}
-	return 0;
+	return (s1[i] - s2[i]);
 }
 
-#include <stdio.h>
-int main(void)
+void	ft_sort_string_tab(char **tab)
 {
-	char *strs[5] = {"hella", "world", "hell"};
-	int res = ft_any(strs, &is_a);
-	printf("%d", res);
-	return 0;
+	int	i;
+	int	j;
+
+	i = 0;
+	while (tab[i] != 0)
+	{
+		j = i + 1;
+		while (tab[j] != 0)
+		{
+			if (ft_strcmp(tab[i], tab[j]) > 0)
+				ft_swap(&tab[i], &tab[j]);
+			j++;
+		}
+		i++;
+	}
 }
