@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ops.c                                           :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 17:04:30 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/16 17:06:08 by feltan           ###   ########.fr       */
+/*   Created: 2024/03/06 09:46:22 by feltan            #+#    #+#             */
+/*   Updated: 2024/03/19 11:34:40 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_add(int a, int b)
-{
-	return a + b;
-}
+#include <unistd.h>
+#include "ft_utils.h"
 
-int ft_minus(int a, int b)
+void ft_putnbr(int nb)
 {
-	return a - b;
-}
-
-int ft_mul(int a, int b)
-{
-	return a * b;
-}
-
-int ft_div(int a, int b)
-{
-	return a / b;
+	if(nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
+	}
+	else if(nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
+	}
+	else if(nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else {
+		ft_putchar(nb + 48);
+	}
 }
