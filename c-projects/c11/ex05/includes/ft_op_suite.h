@@ -6,12 +6,12 @@
 /*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 11:22:58 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/20 10:31:28 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/20 14:00:37 by feltan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_DO_OP_H
-#define FT_DO_OP_H
+#ifndef FT_OP_SUITE_H
+#define FT_OP_SUITE_H
 
 int ft_add(int a, int b);
 int ft_minus(int a, int b);
