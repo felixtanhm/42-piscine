@@ -1,0 +1,26 @@
+one octillion
+ten octillion
+one hundred octillion
+one nonillion
+ten nonillion
+one hundred nonillion
+one decillion
+ten decillion
+one hundred decillion
+one undecillion
+ten undecillion
+one hundred undecillion
+Dict Error
+one octillion one
+ten octillion one
+one hundred octillion one
+one nonillion one
+ten nonillion one
+one hundred nonillion one
+one decillion one
+ten decillion one
+one hundred decillion one
+one undecillion one
+ten undecillion one
+one hundred undecillion one
+Dict Error

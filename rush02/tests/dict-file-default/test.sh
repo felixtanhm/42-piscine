@@ -1,0 +1,2 @@
+$BINARY 1
+$BINARY 0
