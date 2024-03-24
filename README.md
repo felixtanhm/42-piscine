@@ -51,7 +51,7 @@ My solutions for projects in 42 Piscine. Please open an issue in this repository
 
 Of the projects done, I'm particularly proud of being able to complete [**C11's ex05**](./c-projects/c11/ex05/) - to create a barebones calculator program in C. To me, the ability to build a simple program represents the culmination of the 26 days in which I was a part of the program and served as a good wrap up to everything I've learnt about C.
 
-Another highlight was [**C09's ex00**](./c-projects/c09/ex00/), where the functions I wrote to replicate existing C library functions could be compiled into a library, and exported to be used elsewhere. Being able to create libraries was a little mindblowing to me.
+Another highlight was [**C09's ex00**](./c-projects/c09/ex00/), where the functions I wrote to replicate existing C library functions could be compiled into a library, and exported to be used elsewhere. Knowing that I have a library created with functions written by myself, and which can be used by others, blows my mind.
 
 ## 3. Piscine Tips & Tricks
 
