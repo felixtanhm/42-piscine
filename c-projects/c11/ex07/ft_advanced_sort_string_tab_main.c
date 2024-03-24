@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_advanced_sort_string_tab_main.c                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:10:57 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/20 16:05:20 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/24 10:17:31 by felixtanhm       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,32 @@ void	ft_swap(char **a, char **b)
 	*a = *b;
 	*b = tmp;
 }
+int	ft_strlen(char **str)
+{
+	int	i;
 
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 void	ft_advanced_sort_string_tab(char **tab, int(*cmp)(char *, char *))
 {
 	int	i;
 	int	j;
+int		size;
 
 	i = 0;
-	while (tab[i] != 0)
+	size = ft_strlen(tab);
+	while (i < size - 1)
 	{
 		j = 0;
-		while (tab[j] != 0)
+		while (j < size - i - 1)
 		{
-			if (tab[j + 1] && cmp(tab[i], tab[j + 1]) > 0)
-				ft_swap(&tab[i], &tab[j + 1]);
+			if (cmp(tab[j], tab[j + 1]) > 0)
+			{
+				ft_swap(&tab[j], &tab[j + 1]);
+			}
 			j++;
 		}
 		i++;
@@ -53,6 +65,7 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (s1[i] - s2[i]);
 }
+
 int		main(void)
 {
 	int		index;
