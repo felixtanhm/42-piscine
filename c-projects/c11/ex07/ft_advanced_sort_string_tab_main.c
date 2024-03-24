@@ -6,7 +6,7 @@
 /*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:10:57 by feltan            #+#    #+#             */
-/*   Updated: 2024/03/24 10:17:31 by felixtanhm       ###   ########.fr       */
+/*   Updated: 2024/03/24 10:19:38 by felixtanhm       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_swap(char **a, char **b)
 	*a = *b;
 	*b = tmp;
 }
+
 int	ft_strlen(char **str)
 {
 	int	i;
@@ -31,18 +32,19 @@ int	ft_strlen(char **str)
 		i++;
 	return (i);
 }
+
 void	ft_advanced_sort_string_tab(char **tab, int(*cmp)(char *, char *))
 {
 	int	i;
 	int	j;
-int		size;
+	int		size;
 
 	i = 0;
 	size = ft_strlen(tab);
 	while (i < size - 1)
 	{
 		j = 0;
-		while (j < size - i - 1)
+		while (j < size - 1 - i)
 		{
 			if (cmp(tab[j], tab[j + 1]) > 0)
 			{
