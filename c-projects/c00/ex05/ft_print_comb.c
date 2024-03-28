@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: felixtanhm <felixtanhm@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:32:34 by feltan            #+#    #+#             */
-/*   Updated: 2024/02/28 12:16:46 by feltan           ###   ########.fr       */
+/*   Updated: 2024/03/29 00:41:06 by felixtanhm       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+/*
+ * @brief Writes all possible combinations of 3 numerical digits, in ascending order. Repetitions are not allowed. Eg. '021' is already printed from '012'
+ * @param NULL
+ * @return NULL
+ */
 void	ft_print_comb(void)
 {
 	int	a;

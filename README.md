@@ -47,6 +47,16 @@ This has been a worthwhile learning experience. I've had a ton of fun with amazi
 
 My solutions for projects in 42 Piscine. Please open an issue in this repository if you spot any errors.
 
+```
+/*
+ * Project files will be documented in the below format:
+
+ * @brief what this code / function is supposed to do
+ * @param the parameters which are passed into the function
+ * @return the return value that this function will return
+ */
+```
+
 ### **Project Highlights**
 
 Of the projects done, I'm particularly proud of being able to complete [**C11's ex05**](./c-projects/c11/ex05/) - to create a barebones calculator program in C. To me, the ability to build a simple program represents the culmination of the 26 days in which I was a part of the program and served as a good wrap up to everything I've learnt about C.
