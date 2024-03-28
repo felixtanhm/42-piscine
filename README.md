@@ -26,6 +26,8 @@ This has been a worthwhile learning experience. I've had a ton of fun with amazi
 
 ## 2. Projects
 
+`Don't copy, learn. :)`
+
 | Projects |             Solutions             |         Concepts          |
 | :------: | :-------------------------------: | :-----------------------: |
 | Shell00  | [100%](./shell-projects/shell00/) |       Shell Basics        |
