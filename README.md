@@ -115,7 +115,7 @@ Another highlight was [**C09's ex00**](./c-projects/c09/ex00/), where the functi
 
 - You do **not** need to `norminette` your exam solutions.
 - You do **not** need to have the `42 Header` in your solution file.
-- You **do** need to pay attention to what the exam question is asking for. Remove any unnneccesary testing functions and files.
+- You **do** need to pay attention to what the exam question is asking for. Remove any unneccesary testing functions and files.
 - Before submission, commit and push your code to the `rendu/<test question>` directory.
 - To submit, type `grademe` in the examshell and wait for your results.
 - Upon each submission, there are `traces` that will be saved to your `traces` folder. These traces can help you debug what went wrong with your solution.
