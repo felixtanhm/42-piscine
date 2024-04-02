@@ -67,6 +67,10 @@ Another highlight was [**C09's ex00**](./c-projects/c09/ex00/), where the functi
 
 ## 3. Piscine Tips & Tricks
 
+### Most Important Advice
+
+Watch [CS50x](https://cs50.harvard.edu/x/2024/)'s lectures till **Week5**. This will cover everything you need to know in the entire Piscine's C syllabus. Post Piscine, this is the single piece of advice I wish I did before the Piscine. I'm kicking myself for not doing this (only watched till Week2) - so don't make the mistake like me. **Watch till WEEK5!**
+
 ### **Timeline & Pacing**
 
 #### **Week1:** Shell00, Shell01, C00, C01
